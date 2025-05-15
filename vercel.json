@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "buildCommand": "npm install && npm install uuid @types/uuid && npm run build",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "outputDirectory": ".next"
+}
