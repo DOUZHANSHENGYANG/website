@@ -36,7 +36,9 @@
 - **前端**：Next.js 14, React, Tailwind CSS, Shadcn UI
 - **后端**：Next.js API Routes
 - **数据库**：Supabase (PostgreSQL)
-- **认证**：NextAuth.js
+- **认证**：自定义认证系统（固定用户名密码）
+- **存储**：Supabase Storage
+- **工具库**：date-fns, uuid, react-markdown
 - **部署**：Vercel
 
 ## 快速开始
