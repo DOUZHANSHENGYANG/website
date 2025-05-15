@@ -7,18 +7,18 @@ export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  
+
   // 切换下拉菜单
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
-  
+
   // 切换主题
   const changeTheme = (newTheme: 'light' | 'dark' | 'system') => {
     setTheme(newTheme);
     setIsOpen(false);
   };
-  
+
   // 点击外部关闭下拉菜单
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -29,18 +29,18 @@ export default function ThemeToggle() {
         setIsOpen(false);
       }
     };
-    
+
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
-  
+
   return (
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={toggleDropdown}
-        className="p-2 text-gray-500 rounded-md hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800"
+        className="p-2 text-gray-500 rounded-md hover:bg-gray-100 hover:text-indigo-600 dark:text-gray-400 dark:hover:bg-gray-800/80 dark:hover:text-indigo-400 transition-colors"
         aria-label="切换主题"
       >
         {theme === 'light' ? (
@@ -80,14 +80,14 @@ export default function ThemeToggle() {
           </svg>
         )}
       </button>
-      
+
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 py-2 bg-white rounded-md shadow-lg dark:bg-gray-800 z-10">
+        <div className="absolute right-0 mt-2 w-48 py-2 bg-white rounded-md shadow-lg dark:bg-gray-800/90 border dark:border-gray-700 backdrop-blur-sm z-10">
           <button
             onClick={() => changeTheme('light')}
             className={`${
               theme === 'light' ? 'bg-gray-100 dark:bg-gray-700' : ''
-            } flex items-center w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700`}
+            } flex items-center w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 hover:text-indigo-600 dark:hover:bg-gray-700/80 dark:hover:text-indigo-400 transition-colors`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +107,7 @@ export default function ThemeToggle() {
             onClick={() => changeTheme('dark')}
             className={`${
               theme === 'dark' ? 'bg-gray-100 dark:bg-gray-700' : ''
-            } flex items-center w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700`}
+            } flex items-center w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 hover:text-indigo-600 dark:hover:bg-gray-700/80 dark:hover:text-indigo-400 transition-colors`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +123,7 @@ export default function ThemeToggle() {
             onClick={() => changeTheme('system')}
             className={`${
               theme === 'system' ? 'bg-gray-100 dark:bg-gray-700' : ''
-            } flex items-center w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700`}
+            } flex items-center w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 hover:text-indigo-600 dark:hover:bg-gray-700/80 dark:hover:text-indigo-400 transition-colors`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

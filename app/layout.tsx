@@ -77,7 +77,49 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN" className="light">
+    <html lang="zh-CN">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `
+          // 在页面加载前应用主题，避免闪烁
+          (function() {
+            function getInitialTheme() {
+              try {
+                // 尝试从localStorage获取主题设置
+                const storedTheme = localStorage.getItem('theme');
+
+                // 如果是明确的light或dark主题，直接返回
+                if (storedTheme === 'light' || storedTheme === 'dark') {
+                  return storedTheme;
+                }
+
+                // 如果是system或未设置，则使用系统偏好
+                if (storedTheme === 'system' || !storedTheme) {
+                  const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  return isDarkMode ? 'dark' : 'light';
+                }
+
+                // 默认返回light
+                return 'light';
+              } catch (e) {
+                // 如果出错，默认返回light
+                console.error('主题检测错误:', e);
+                return 'light';
+              }
+            }
+
+            // 应用主题
+            const theme = getInitialTheme();
+            document.documentElement.classList.remove('light', 'dark');
+            document.documentElement.classList.add(theme);
+            document.documentElement.style.colorScheme = theme;
+
+            // 调试信息
+            console.log('初始主题:', theme);
+            console.log('系统偏好:', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            console.log('localStorage主题:', localStorage.getItem('theme'));
+          })();
+        ` }} />
+      </head>
       <body className={`${inter.variable} ${robotoMono.variable} antialiased min-h-screen flex flex-col`}>
         <ThemeProvider>
           <PageLoadingBar />

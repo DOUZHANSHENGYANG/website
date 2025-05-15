@@ -17,11 +17,18 @@ export async function GET(request: NextRequest) {
     }
 
     // 获取管理员用户信息
-    const { data: user, error } = await supabase
+    const { data: userData, error } = await supabase
       .from('users')
       .select('*')
       .eq('username', 'douzhan')
       .single();
+
+    // 转换字段名称以匹配前端
+    const user = userData ? {
+      ...userData,
+      githubUrl: userData.github_url,
+      googleEmail: userData.google_email
+    } : null;
 
     if (error) {
       return NextResponse.json(

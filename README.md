@@ -161,5 +161,5 @@ MIT
 
 如有任何问题或建议，请通过以下方式联系：
 
-- 邮箱：[your.email@example.com](mailto:your.email@example.com)
-- GitHub Issues
+- 邮箱：[douzhanshengyan@gmail.com](mailto:douzhanshengyan@gmail.com)
+- GitHub Issues [https://github.com/DOUZHANSHENGYANG](linkto:https://github.com/DOUZHANSHENGYANG)
