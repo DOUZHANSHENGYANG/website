@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import RssButton from '@/components/blog/RssButton';
 
 // 模拟博客文章数据
 const mockPosts = [
@@ -56,6 +57,9 @@ export default function BlogPage() {
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
             探索我的最新文章、教程和想法
           </p>
+          <div className="mt-4 flex justify-center">
+            <RssButton className="inline-flex" />
+          </div>
         </div>
 
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">

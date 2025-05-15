@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://localhost:3000/blog/nextjs-14-features</loc>
+    <lastmod>2025-05-15T13:49:18.871Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://localhost:3000/blog/react-server-components-explained</loc>
+    <lastmod>2025-05-15T13:49:22.187Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://localhost:3000/blog/tailwind-css-utility-first-framework</loc>
+    <lastmod>2025-05-15T13:49:24.986Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url></urlset>

@@ -2,6 +2,7 @@ import React from 'react';
 import { notFound } from 'next/navigation';
 import supabase from '@/lib/db/supabase';
 import PostCard from '@/components/blog/PostCard';
+import RssButton from '@/components/blog/RssButton';
 import { FullPost, Category } from '@/types';
 
 // 根据slug获取分类
@@ -105,9 +106,14 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
               {category.description}
             </p>
           )}
-          <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-            {posts.length} 篇文章
-          </p>
+          <div className="flex items-center mt-2">
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              {posts.length} 篇文章
+            </p>
+            <div className="ml-4">
+              <RssButton category={slug} />
+            </div>
+          </div>
         </div>
 
         {posts.length === 0 ? (

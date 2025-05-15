@@ -49,6 +49,22 @@ export default function Footer() {
               使用条款
             </Link>
           </div>
+          <div className="px-5 py-2">
+            <Link
+              href="/sitemap"
+              className="text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+            >
+              网站地图
+            </Link>
+          </div>
+          <div className="px-5 py-2">
+            <Link
+              href="/rss"
+              className="text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+            >
+              RSS订阅
+            </Link>
+          </div>
         </nav>
         <div className="mt-8 flex justify-center space-x-6">
           <a href="#" className="text-gray-400 hover:text-gray-500 dark:hover:text-white">
