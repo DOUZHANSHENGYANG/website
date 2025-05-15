@@ -157,6 +157,23 @@ export default function AdminDashboard() {
                     </Link>
 
                     <Link
+                      href="/admin/dashboard"
+                      className="bg-white overflow-hidden shadow rounded-lg p-6 hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700"
+                    >
+                      <div className="flex items-center">
+                        <div className="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                          <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                          </svg>
+                        </div>
+                        <div className="ml-4">
+                          <p className="text-base font-medium text-gray-900 dark:text-white">数据统计</p>
+                          <p className="text-sm text-gray-500 dark:text-gray-400">查看网站数据分析</p>
+                        </div>
+                      </div>
+                    </Link>
+
+                    <Link
                       href="/admin/categories"
                       className="bg-white overflow-hidden shadow rounded-lg p-6 hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700"
                     >
@@ -203,6 +220,41 @@ export default function AdminDashboard() {
                         <div className="ml-4">
                           <p className="text-base font-medium text-gray-900 dark:text-white">创建文章</p>
                           <p className="text-sm text-gray-500 dark:text-gray-400">发布新的博客文章</p>
+                        </div>
+                      </div>
+                    </Link>
+
+                    <Link
+                      href="/admin/settings/profile"
+                      className="bg-white overflow-hidden shadow rounded-lg p-6 hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700"
+                    >
+                      <div className="flex items-center">
+                        <div className="flex-shrink-0 bg-pink-500 rounded-md p-3">
+                          <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>
+                        </div>
+                        <div className="ml-4">
+                          <p className="text-base font-medium text-gray-900 dark:text-white">设置</p>
+                          <p className="text-sm text-gray-500 dark:text-gray-400">管理个人信息和网站设置</p>
+                        </div>
+                      </div>
+                    </Link>
+
+                    <Link
+                      href="/admin/upload"
+                      className="bg-white overflow-hidden shadow rounded-lg p-6 hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700"
+                    >
+                      <div className="flex items-center">
+                        <div className="flex-shrink-0 bg-teal-500 rounded-md p-3">
+                          <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                        </div>
+                        <div className="ml-4">
+                          <p className="text-base font-medium text-gray-900 dark:text-white">上传文档</p>
+                          <p className="text-sm text-gray-500 dark:text-gray-400">上传Word文档并转换为文章</p>
                         </div>
                       </div>
                     </Link>

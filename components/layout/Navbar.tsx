@@ -89,6 +89,20 @@ export default function Navbar() {
                 href="/search"
                 className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium dark:text-gray-300 dark:hover:text-white"
               >
+                <svg
+                  className="w-5 h-5 mr-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
                 搜索
               </Link>
             </div>
@@ -103,6 +117,12 @@ export default function Navbar() {
                     className="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium dark:text-gray-300 dark:hover:text-white"
                   >
                     管理后台
+                  </Link>
+                  <Link
+                    href="/admin/settings/profile"
+                    className="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium dark:text-gray-300 dark:hover:text-white"
+                  >
+                    设置
                   </Link>
                   <button
                     onClick={handleLogout}
@@ -204,7 +224,23 @@ export default function Navbar() {
               href="/search"
               className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white"
             >
-              搜索
+              <div className="flex items-center">
+                <svg
+                  className="w-5 h-5 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+                搜索
+              </div>
             </Link>
           </div>
           <div className="pt-4 pb-3 border-t border-gray-200 dark:border-gray-700">
@@ -220,6 +256,12 @@ export default function Navbar() {
                     className="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800"
                   >
                     管理后台
+                  </Link>
+                  <Link
+                    href="/admin/settings/profile"
+                    className="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800"
+                  >
+                    设置
                   </Link>
                   <button
                     onClick={handleLogout}

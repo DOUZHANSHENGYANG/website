@@ -4,6 +4,9 @@ export interface User {
   username: string;
   email: string;
   avatar?: string;
+  bio?: string;
+  githubUrl?: string;
+  googleEmail?: string;
   role: 'admin' | 'user';
   createdAt: Date;
   updatedAt: Date;
@@ -23,6 +26,8 @@ export interface Post {
   createdAt: Date;
   updatedAt: Date;
   viewCount: number;
+  sourceUrl?: string;
+  sourceType?: 'docx' | 'markdown' | 'manual';
 }
 
 // 分类类型定义

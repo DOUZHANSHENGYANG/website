@@ -4,19 +4,40 @@
 
 ## 当前开发进度
 
+### 阶段一：项目初始化与基础设置
+
 - ✅ 项目初始化与基础设置
-- ✅ 基础布局组件（导航栏、页脚）
-- ✅ 首页设计与实现
-- ✅ 博客列表页面
-- ✅ 管理员仪表板页面
-- ✅ 用户认证页面（登录）
-- ✅ 关于页面
-- ⬜ 文章详情页面
-- ⬜ Markdown渲染
-- ⬜ 文章CRUD操作
-- ⬜ 分类和标签管理
-- ⬜ 评论系统
-- ⬜ 搜索功能
+- ✅ 配置Tailwind CSS和Shadcn UI
+- ✅ 设置项目目录结构
+- ✅ 配置ESLint和Prettier
+- ✅ 设置Supabase项目
+- ✅ 设计数据库模型
+- ✅ 配置简单的认证系统（固定用户名密码）
+- ✅ 创建基础布局组件（导航栏、页脚）
+
+### 阶段二：核心功能开发
+
+- ✅ 实现用户认证功能
+- ✅ 开发文章列表页面
+- ✅ 开发文章详情页面
+- ✅ 实现Markdown渲染
+- ✅ 开发文章管理界面
+- ✅ 实现文章CRUD操作
+- ✅ 开发分类和标签管理
+- ✅ 添加常用内置标签和分类
+- ✅ 实现图片上传功能
+- ✅ 实现评论系统
+
+### 阶段三：高级功能开发（进行中）
+
+- ✅ 开发搜索功能
+- ✅ 实现文章分享功能
+- ✅ 开发数据统计仪表板
+- ✅ 优化SEO
+- ✅ 添加用户个人信息编辑功能
+- ✅ 集成阿里云OSS服务和文档上传功能
+- ⬜ 添加网站地图
+- ⬜ 实现RSS订阅
 
 ## 功能特点
 
@@ -51,13 +72,15 @@
 
 ### 安装
 
-1. 克隆仓库
+1. **克隆仓库**
+
 ```bash
 git clone https://github.com/yourusername/personal-blog.git
 cd personal-blog
 ```
 
-2. 安装依赖
+2. **安装依赖**
+
 ```bash
 npm install
 # 或
@@ -66,16 +89,19 @@ yarn install
 pnpm install
 ```
 
-3. 环境变量设置
+3. **环境变量设置**
+
 创建`.env.local`文件并添加以下变量：
-```
+
+```env
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 NEXTAUTH_SECRET=your_nextauth_secret
 NEXTAUTH_URL=http://localhost:3000
 ```
 
-4. 启动开发服务器
+4. **启动开发服务器**
+
 ```bash
 npm run dev
 # 或
@@ -84,7 +110,7 @@ yarn dev
 pnpm dev
 ```
 
-5. 打开浏览器访问 [http://localhost:3000](http://localhost:3000)
+5. **打开浏览器访问** [http://localhost:3000](http://localhost:3000)
 
 ### 数据库设置
 
@@ -94,7 +120,7 @@ pnpm dev
 
 ## 项目结构
 
-```
+```plaintext
 /
 ├── app/                    # Next.js App Router
 │   ├── api/                # API路由
@@ -135,5 +161,5 @@ MIT
 
 如有任何问题或建议，请通过以下方式联系：
 
-- 邮箱：your.email@example.com
+- 邮箱：[your.email@example.com](mailto:your.email@example.com)
 - GitHub Issues

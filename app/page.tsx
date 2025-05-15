@@ -1,10 +1,25 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { Metadata } from 'next';
+import WebsiteJsonLd from '@/components/seo/WebsiteJsonLd';
+
+export const metadata: Metadata = {
+  title: '首页',
+  description: '个人博客网站，分享技术文章、教程和个人见解',
+  keywords: ['博客', '首页', '技术', 'Next.js', 'React'],
+};
 
 export default function Home() {
+  // 获取网站URL
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+
   return (
-    <div className="bg-white dark:bg-gray-900">
-      {/* 英雄区域 */}
+    <>
+      {/* 结构化数据 */}
+      <WebsiteJsonLd url={baseUrl} />
+
+      <div className="bg-white dark:bg-gray-900">
+        {/* 英雄区域 */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
@@ -147,5 +162,6 @@ export default function Home() {
         </div>
       </div>
     </div>
+    </>
   );
 }
